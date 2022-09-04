@@ -102,7 +102,7 @@
             box-shadow: 0px 4px 7px rgba(0, 0, 0, .5);
             cursor: pointer;
             transition: all .5s cubic-bezier(.8, .5, .2, 1.4);
-            overflow:hidden;
+            overflow: hidden;
             position: relative;
         }
 
@@ -129,7 +129,7 @@
             left: 0px;
             transition: all .7s ease-in-out;
             clip-path: circle(75%);
-            overflow-y:auto;
+            overflow-y: auto;
         }
 
         .book_card:hover {
@@ -149,7 +149,8 @@
             letter-spacing: 1px;
             margin: 0px;
         }
-        .book_card h5{
+
+        .book_card h5 {
             color: turquoise;
         }
 
@@ -212,15 +213,13 @@
                         <div class="sb-sidenav-menu-heading"></div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                            Books
+                            Files
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="addbook.php">Add book</a>
+                                <a class="nav-link" href="add.php">Add File</a>
                                 <a class="nav-link" href="viewbook.php">View book</a>
-                                <a class="nav-link" href="issuebook.php">Issue book</a>
-                                <a class="nav-link" href="returnBook.php">Return book</a>
                             </nav>
                         </div>
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -251,7 +250,7 @@
         </div>
         <div id="layoutSidenav_content">
             <main class="mb-5">
-                <div class="container-fluid px-4">
+                <div class="container">
                     <h1 class="mt-4">Admin Panel </h1>
                     <ol class="breadcrumb mb-1">
                         <li class="breadcrumb-item active"><?php echo ("Welcome $name"); ?></li>

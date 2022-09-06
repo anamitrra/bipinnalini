@@ -51,7 +51,7 @@ include 'main.php';
                 <td>' . $row["id"] . '</td>
                 <td><img src="' . $row['thumbnail'] . '" width="auto" height="120"></td>
                 <td>' . $row["name"] . '</td>
-                <td>' . $row["desription"] . '</td>
+                <td>' . $row["description"] . '</td>
                 <td>' . $row["author"] . '</td>
                 <td><a style="color: blue" href=" ' . $row["link"] . '">' . $row["link"] . '</a> </td>
                 <td><a class="btn btn-primary" href="editbook.php?id=' . $row["id"] . '">EDIT</a></td>

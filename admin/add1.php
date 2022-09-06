@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 
 
 	if (mysqli_query($con, $query)) {
-		header("location:addbook.php");
+		header("location:add.php");
 	} else {
 		echo "There was an error uploading your file. Go back and Try again   ";
 		echo mysqli_error($con);

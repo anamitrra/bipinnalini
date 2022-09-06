@@ -28,9 +28,9 @@ include 'main.php';
 
                 <select class="form-control" name="category" id="category" placeholder="Category" required>
                     <option value="book">Book</option>
-                    <option value="book">Art</option>
-                    <option value="book">Audio</option>
-                    <option value="book">Video</option>
+                    <option value="art">Art</option>
+                    <option value="audio">Audio</option>
+                    <option value="video">Video</option>
                 </select>
                 <label> Category </label>
             </div>

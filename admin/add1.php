@@ -4,13 +4,12 @@
 include '../connect.php';
 
 $name = $_POST["name"];
-$description = $_POST["description"];
+$description = mysqli_real_escape_string($con, $_POST["description"]);
 $author = $_POST["author"];
 $category = $_POST["category"];
 $link = $_POST["link"];
 $thumbnail = $_FILES["thumbnail"];
 $file = $_FILES["file"];
-
 if (isset($_POST['submit'])) {
 
 
@@ -25,10 +24,10 @@ if (isset($_POST['submit'])) {
 	$thumbnail_ActualEXt = strtolower(end($thumbnail_Ext));
 
 	$thumbnail_namenew = uniqid('', true) . "." . $thumbnail_ActualEXt;
-	$thumbnail_destination = 'uploads/' . $thumbnail_namenew;
+	$thumbnail_destination = 'uploads/thumbnails/' . $thumbnail_namenew;
 	move_uploaded_file($thumbnail_temp, $thumbnail_destination);
 
-	if ($file != null) {
+	if ($_POST["file"] != null) {
 		$filename = $file['name'];
 		$fileerror = $file['error'];
 		$filetemp = $file['tmp_name'];

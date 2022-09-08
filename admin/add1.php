@@ -27,7 +27,14 @@ if (isset($_POST['submit'])) {
 	$thumbnail_destination = 'uploads/thumbnails/' . $thumbnail_namenew;
 	move_uploaded_file($thumbnail_temp, $thumbnail_destination);
 
-	if ($_POST["file"] != null) {
+	if ($_FILES["file"] == null) {
+
+		$filedestination = null;
+	} 
+	
+	else {
+		
+
 		$filename = $file['name'];
 		$fileerror = $file['error'];
 		$filetemp = $file['tmp_name'];
@@ -38,10 +45,9 @@ if (isset($_POST['submit'])) {
 		$fileActualEXt = strtolower(end($fileExt));
 
 		$filenamenew = uniqid('', true) . "." . $fileActualEXt;
-		$filedestination = 'uploads/' . $filenamenew;
+		$filedestination = 'uploads/files/' . $filenamenew;
 		move_uploaded_file($filetemp, $filedestination);
-	} else {
-		$filedestination = null;
+
 	}
 
 

@@ -101,7 +101,7 @@ include 'main.php';
     </div>
 
     <div class="col-md" style="margin-top: 20px;">
-        <input type="submit" class="btn btn-md btn-success form-control" value="Add Book" name="submit">
+        <input type="submit" class="btn btn-md btn-success form-control" value="Add Book" name="submit" onClick='return confirmSubmit()'>
     </div>
     </div>
 
@@ -117,5 +117,16 @@ include 'main.php';
 </footer>
 
 </body>
-
+<script LANGUAGE="JavaScript">
+<!--
+function confirmSubmit()
+{
+var agree=confirm("Are you sure you wish to continue?");
+if (agree)
+ return true ;
+else
+ return false ;
+}
+// -->
+</script>
 </html>

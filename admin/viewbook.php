@@ -31,12 +31,11 @@ include 'main.php';
         <table class="table" id="myTable">
             <thead class="thead">
                 <tr>
-                    <td>ID</td>
-                    <td>Photo</td>
+                 
+                    <td>Thumbnail</td>
                     <td>Name</td>
                     <td>Description</td>
-                    <td>Author</td>
-                    <td>Link</td>
+                    <td>Author</td> 
                     <td>Action</td>
                 </tr>
             </thead>
@@ -48,13 +47,13 @@ include 'main.php';
                 while ($row = mysqli_fetch_array($result)) {
                     echo '
             <tr>
-                <td>' . $row["id"] . '</td>
+                
                 <td><img src="' . $row['thumbnail'] . '" width="auto" height="120"></td>
                 <td>' . $row["name"] . '</td>
                 <td>' . $row["description"] . '</td>
                 <td>' . $row["author"] . '</td>
-                <td><a style="color: blue" href=" ' . $row["link"] . '">' . $row["link"] . '</a> </td>
-                <td><a class="btn btn-primary" href="editbook.php?id=' . $row["id"] . '">EDIT</a></td>
+        
+                <td > <a class="btn btn-primary" href="deletebooks.php?id=' . $row["id"] . '" onclick="confirmation()" >Delete</a></td>
                 </tr>
         ';
                 }
@@ -95,5 +94,16 @@ include 'main.php';
 
 </body>
 
-
+<script LANGUAGE="JavaScript">
+<!--
+function confirmSubmit()
+{
+var agree=confirm("Are you sure you wish to continue?");
+if (agree)
+ return true ;
+else
+ return false ;
+}
+// -->
+</script>
 </html>

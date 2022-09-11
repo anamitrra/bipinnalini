@@ -31,7 +31,6 @@ include 'main.php';
         <table class="table" id="myTable">
             <thead class="thead">
                 <tr>
-              
                     <td>Thumbnail</td>
                     <td>Name</td>
                     <td>Description</td>
@@ -54,7 +53,7 @@ include 'main.php';
                 <td>' . $row["description"] . '</td>
                 <td>' . $row["author"] . '</td>
                 <td><a style="color: blue" href=" ' . $row["link"] . '">' . $row["link"] . '</a> </td>
-                <td><a class="btn btn-primary" href="editbook.php?id=' . $row["id"] . '">EDIT</a></td>
+                <td><a class="btn btn-danger" href="deletesongs.php?id=' . $row["id"] . '">Delete</a></td>
                 </tr>
         ';
                 }

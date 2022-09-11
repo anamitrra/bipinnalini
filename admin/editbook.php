@@ -42,15 +42,7 @@ $row = mysqli_fetch_array($result);
                     <option <?php if ($row['category'] == 'book') {
                                 echo 'selected';
                             } ?> value="book">Book</option>
-                    <option <?php if ($row['category'] == 'art') {
-                                echo 'selected';
-                            } ?> value="art">Art</option>
-                    <option <?php if ($row['category'] == 'audio') {
-                                echo 'selected';
-                            } ?> value="audio">Audio</option>
-                    <option <?php if ($row['category'] == 'video') {
-                                echo 'selected';
-                            } ?> value="video">Video</option>
+                  
                 </select>
                 <label> Category </label>
             </div>
@@ -62,7 +54,14 @@ $row = mysqli_fetch_array($result);
     <div class="row g-2">
         <div class="col-md">
             <div class="form-floating mb-3">
+                <input type="text" class="form-control" name="id" id="id" placeholder="id" value="<?php echo $row['id'] ?>" hidden >
+            </div>
+        </div>
+    </div>
 
+    <div class="row g-2">
+        <div class="col-md">
+            <div class="form-floating mb-3">
                 <input type="text" class="form-control" name="name" id="b_name" placeholder="Name" value="<?php echo $row['name'] ?>" required>
                 <label for="book_name">Name </label>
             </div>

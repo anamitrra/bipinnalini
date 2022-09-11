@@ -23,12 +23,12 @@
   <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="#">BipinNalini</a>
+        <a class="navbar-brand" href="../index.html">BipinNalini</a>
       </div>
       <ul class="nav navbar-nav">
         <li class="active"><a href="#">Books</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Arts</a></li>
+        <li><a href="../songs/all-songs.php">Music</a></li>
+        <li><a href="../art/art.html">Arts</a></li>
       </ul>
       <button class="btn btn-danger navbar-btn">back</button>
     </div>
@@ -46,10 +46,10 @@
       while ($row = mysqli_fetch_array($result)) {
       ?>
 
-        <div class="col-md-4">
+        <div class="col-md-3">
           <div class="thumbnail">
             <a href="<?php echo $row['file']; ?>" target="_blank">
-              <img src="./<?php echo $row['thumbnail']; ?>"style="width:70%">
+              <img src= "./<?php echo $row['thumbnail']; ?>"   class="img-fluid">
               <div class="caption">
                 <h3><?php echo $row['name']; ?></h3>
                 <p><?php echo $row['description']; ?></p>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Books</title>
+  <title>Songs</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -20,29 +20,29 @@
 </head>
 
 <body>
-<nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse">
     <div class="container-fluid">
       <div class="navbar-header">
-        <a class="navbar-brand" href="../index.html">BipinNalini</a>
+        <a class="navbar-brand" href="#">BipinNalini</a>
       </div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Books</a></li>
-        <li><a href="../songs/all-songs.php">Music</a></li>
+        <li class="#"><a href="../books/allbooks.php">Books</a></li>
+        <li class="active"><a href="active">Music</a></li>
         <li><a href="../art/art.html">Arts</a></li>
       </ul>
-      <a  class="btn btn-danger navbar-btn" href ="../index.html">Home</a> 
+      <a class="btn btn-danger navbar-btn" href ="../index.html">Home</a> 
     </div>
   </nav>
 
   <div class="container">
-    <h2>All Books</h2>
-    <br>
+    <h2>All Songs</h2>
+  <br>
     <div class="row">
 
       <?php
       include '../connect.php';
 
-      $result = mysqli_query($con, "select * from files where category='book'");
+      $result = mysqli_query($con, "select * from files where category='audio'");
       while ($row = mysqli_fetch_array($result)) {
       ?>
 

@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
 	}
 
 
-	$query = "INSERT INTO `files` (`id`, `category`, `name`, `description`, `author`, `file`, `thumbnail`, `link`, `status`, `created_at`) VALUES (NULL, 'book', '$name', '$description', '$author', '$filedestination', '$thumbnail_destination', '$link', '1', CURRENT_TIMESTAMP) ";
+	$query = "INSERT INTO `files` (`id`, `category`, `name`, `description`, `author`, `file`, `thumbnail`, `link`, `status`, `created_at`) VALUES (NULL, '$category', '$name', '$description', '$author', '$filedestination', '$thumbnail_destination', '$link', '1', CURRENT_TIMESTAMP) ";
 
 
 

@@ -15,6 +15,10 @@ $book_sql = ("SELECT COUNT(id) FROM files WHERE category='book' ");
 $book = mysqli_query($con, $book_sql);
 $total_books = mysqli_fetch_array($book);
 
+$song_sql = ("SELECT COUNT(id) FROM files WHERE category='audio' ");
+$song = mysqli_query($con, $song_sql);
+$total_songs = mysqli_fetch_array($song);
+
 
 
 echo mysqli_error($con);
@@ -22,7 +26,7 @@ echo mysqli_error($con);
 ?>
 
 
-
+<br>
 <div class="row">
 
     <div class="col">
@@ -36,22 +40,14 @@ echo mysqli_error($con);
     </div>
     <div class="col">
         <div class="card bg-primary text-white mb-4">
-            <div class="card-body">Total Audio: <?php echo $total_audios[0]; ?></div>
+            <div class="card-body">Total Audio: <?php echo $total_songs[0]; ?></div>
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="available.php">View Details</a>
+                <a class="small text-white stretched-link" href="viewsongs.php">View Details</a>
                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
             </div>
         </div>
     </div>
-    <div class="col">
-        <div class="card bg-danger text-white mb-4">
-            <div class="card-body">Total Videos: <?php echo $total_videos[0]; ?> </div>
-            <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="issuebook.php">View Details</a>
-                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-            </div>
-        </div>
-    </div>
+  
 
 </div>
 

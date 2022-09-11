@@ -27,10 +27,10 @@ include 'main.php';
             <div class="form-floating mb-3">
 
                 <select class="form-control" name="category" id="category" placeholder="Category" required>
+                <option value="">Choose...</option>
                     <option value="book">Book</option>
-                    <option value="art">Art</option>
                     <option value="audio">Audio</option>
-                    <option value="video">Video</option>
+                  
                 </select>
                 <label> Category </label>
             </div>
